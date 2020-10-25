@@ -27,9 +27,6 @@ class Route
             return null;
         }
 
-        // /{(.*)}/
-        // ~\{([^\}]+)\}~
-
         $pattern = preg_replace_callback('/{(.*)}/', function ($matches) {
             $argument = $matches[1];
             $replace  = $this->requirements[$argument] ?? '[^}]+';
