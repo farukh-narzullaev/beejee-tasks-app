@@ -1,5 +1,8 @@
 <?php
 
+var_dump(1);
+die;
+
 session_start();
 
 require_once '../vendor/autoload.php';
