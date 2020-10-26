@@ -2,9 +2,9 @@
 
 use Framework\Database;
 
-define('DATABASE_HOST', '127.0.0.1');
-define('DATABASE_NAME', 'tasks_app');
-define('DATABASE_USER', 'tasks_app_user');
-define('DATABASE_PASSWORD', 'password');
+define('DATABASE_HOST', getenv('DATABASE_HOST'));
+define('DATABASE_NAME', getenv('DATABASE_NAME'));
+define('DATABASE_USER', getenv('DATABASE_USER'));
+define('DATABASE_PASSWORD', getenv('DATABASE_PASSWORD'));
 
 Database::connect();

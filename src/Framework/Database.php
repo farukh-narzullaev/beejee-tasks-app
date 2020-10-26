@@ -13,7 +13,7 @@ class Database
 
     public function __construct()
     {
-        $dsn = 'mysql:dbname=' . DATABASE_NAME . ';host=' . DATABASE_HOST . ';charset=utf8';
+        $dsn = 'mysql:host=' . DATABASE_HOST . ';dbname=' . DATABASE_NAME;
 
         static::$connection = new PDO($dsn, DATABASE_USER, DATABASE_PASSWORD);
 
