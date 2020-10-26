@@ -22,7 +22,7 @@ class MatchedRoute
 
     public function getHandler()
     {
-        return $this->handler;
+        return [new $this->handler[0], $this->handler[1]];
     }
 
     public function getAttributes()

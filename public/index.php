@@ -20,8 +20,7 @@ try {
         $request->addAttribute($name, $value);
     }
 
-    $handler = $matchedRoute->getHandler();
-    $response = $handler($request);
+    $response = call_user_func_array($matchedRoute->getHandler(), [$request]);
 } catch (Exception $e) {
     $response = new Response($e->getMessage());
 }
